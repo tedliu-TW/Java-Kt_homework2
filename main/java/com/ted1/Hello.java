@@ -2,6 +2,12 @@ package com.ted1;
 
 public class Hello {
     public static void main(String[] args) {
+        String s ="abcdefg";
+        System.out.println(s.charAt(3));
+        System.out.println(s.substring(1,3));
+
+
+
     Person p =new Person();
     p.hello();;
     p.weight=66.5f;
