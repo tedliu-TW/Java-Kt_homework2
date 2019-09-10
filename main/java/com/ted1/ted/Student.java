@@ -11,10 +11,15 @@ public class Student {
         this.english = english;
         this.math = math;
     }
+
+
     public void print(){
         System.out.println(name + "\t"+english +"\t"+math+"\t"+(math+english)/2);
     }
+    public int highest(){
 
+        return (english>math) ? english:math;
+    }
 
 
 

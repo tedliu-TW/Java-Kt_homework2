@@ -15,9 +15,6 @@ public class SchoolRunner {
 
         Student stu = new Student(name,english,math);
         stu.print();
-
-
-
-
+        System.out.println("High score:"+stu.highest());
     }
 }
