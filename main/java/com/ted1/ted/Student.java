@@ -20,7 +20,7 @@ public class Student {
 
         return (english>math) ? english:math;
     }
-
+    public int getAverage(){return (english+math)/2;}
 
 
 }

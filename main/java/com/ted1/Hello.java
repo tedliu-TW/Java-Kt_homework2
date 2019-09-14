@@ -8,7 +8,7 @@ public class Hello {
 
 
 
-    Person p =new Person();
+    Person p =new Person(66.5f,1.7f);
     p.hello();;
     p.weight=66.5f;
     p.height=1.7f;

@@ -13,8 +13,9 @@ class Stuednt( var name:String?,var english:Int,var math:Int){
     fun print(){
         println(name+"\t"+english+"\t"+math+"\t"+(math+english)/2)
     }
-
 }
+
+
 
 
 
