@@ -7,6 +7,7 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.time.Duration;
 import java.time.Instant;
+import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
 import java.time.LocalDateTime;
 import java.util.Calendar;
@@ -14,10 +15,25 @@ import java.util.Date;
 
 public class Tester {
     public static void main(String[] args) {
-        //ctrl+ alt + m 
- //       Java();
+    LocalDateTime enter=
+            LocalDateTime.of(2019,01,01,10,0);
+    LocalDateTime Leave=
+            LocalDateTime.of(2019,01,01,11,10);
+
+
+    Car car =new Car("AA-0001",enter);
+    car.setLeave(Leave);
+        System.out.println(car.getDuration());
+
+     long hour =(long) Math.ceil(car.getDuration()/60.0);
+        System.out.println(hour);
+        System.out.println(hour*30);
+
+
+ //ctrl+ alt + m
+        //       Java();
 //        Java 8
-       Java8();
+ //      Java8();
 
 
     }
