@@ -1,18 +1,18 @@
 package com.tom
 
-import com.ted1.ted.Student
+import student.Student
 import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.Test
 
 class StudentTest{
     @Test
     fun highestTest(){
-        val student = Student("hank",60,80)
+        val student = Student("hank", 60, 80)
         Assertions.assertEquals(80,student.highest())
     }
     @Test
     fun averageTest(){
-        val student = Student("hank",60,80)
+        val student = Student("hank", 60, 80)
         Assertions.assertEquals((60+80)/2,student.average)
 
 

@@ -1,7 +1,5 @@
-package com.ted1.ted;
+package student;
 
-
-import com.ted2.Student.Stuednt;
 
 import java.util.Scanner;
 
@@ -14,6 +12,8 @@ public class SchoolRunner {
         Student stu = new Student("ted",97,10);
         Student stu2 = new Student("tom",60,40);
         Student stu3 = new Student("hank",30,55);
+        GraduateStudent gstu = new GraduateStudent("jack",55,65,60);
+        gstu.print();
 
         stu.print();
         stu2.print();

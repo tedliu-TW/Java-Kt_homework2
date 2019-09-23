@@ -1,6 +1,6 @@
 package com.ted1;
 
-import com.ted1.ted.Student;
+import student.Student;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 

@@ -1,5 +1,6 @@
 package com.ted2.Student
 
+import student.Student
 import  java.util.*
 
 fun main() {
@@ -8,6 +9,8 @@ fun main() {
     val stu = Stuednt("Hank",60,99)
     val stu1 = Stuednt("Han",44,68)
     val stu2 = Stuednt("ank",30,49)
+    val gstu = GraduateStudent("jack",55,65,60)
+    gstu.print()
     stu.print()
     stu1.print()
     stu2.print()
@@ -19,7 +22,24 @@ fun main() {
 
 
 }
-class Stuednt( var name:String?,var english:Int,var math:Int){
+//kt
+class GraduateStudent(name: String?,english: Int,math: Int,var thesis:Int) : Stuednt(name,english,math){  //kt super father function
+    companion object{
+        var pass=70
+    }
+
+    //ovrride
+    override fun print() {
+        println("$name\t$english\t$math\t$thesis\t${getAverage()}\t${passOrFailed()}\t${grading()}")
+    }
+
+    override fun passOrFailed()=if(getAverage()>=pass) "PASS" else "FAILED"
+}
+
+
+
+
+open class Stuednt( var name:String?,var english:Int,var math:Int){  //open = java public  no open = private
     //kt static companion object
     companion object{
         @JvmStatic //for java use
@@ -28,8 +48,7 @@ class Stuednt( var name:String?,var english:Int,var math:Int){
             println("testing")
         }
     }
-
-    fun print(){
+    open fun print(){
        println("$name\t$english\t$math\t${getAverage()}\t${passOrFailed()}\t${grading()}")
     }
     fun grading()=when(getAverage()){
@@ -41,7 +60,7 @@ class Stuednt( var name:String?,var english:Int,var math:Int){
 
     }
 
-    fun passOrFailed()=
+    open fun passOrFailed()=
         if(getAverage()>=pass) "PASS" else "FAILED"
 
     fun getAverage() =(english+math)/2

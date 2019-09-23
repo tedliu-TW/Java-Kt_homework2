@@ -1,27 +1,17 @@
-package com.ted1.ted;
+package student;
 
-public class Student {
-    String id;
-    String name;
-    int english;
-    int math;
-    static int pass =60;
-
-    public Student(String name, int english, int math) { //alt+ Ins
-        this.name = name;
-        this.english = english;
-        this.math = math;
-    }
-
-
-
-    public int highest(){
-        return (english>math) ? english:math;
-    }
-
-    public void print(){
-         int average = getAverage();
+public class GraduateStudent extends Student {
+        int thesis;
+        static int pass =70;
+        public GraduateStudent(String name,int englsih,int math,int thesis){
+          super(name,englsih,math);
+          this.thesis=thesis;
+        }
+    @Override
+    public void print() {
+        int average = getAverage();
         System.out.println(name + "\t"+english +"\t"+math+"\t"
+                +thesis+"\t"
                 +getAverage()+"\t"+((getAverage()>=pass)? "PASS":"FAILED")
         );
         char grading ='F';
@@ -40,15 +30,7 @@ public class Student {
                 grading='D';
             default:
                 grading='F';
-        }
-
-
-
     }
+}}
 
 
-
-    public int getAverage(){return (english+math)/2;}
-
-
-}

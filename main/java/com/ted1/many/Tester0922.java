@@ -7,13 +7,12 @@ public class Tester0922 {
         //Map
         HashMap<String,String> stocks =
                 new HashMap<>();
-        stocks.put("2330","台積電");
-        stocks.put("2317","鴻海");
-        stocks.put("2330","TSMC");
-        System.out.println( stocks.get("2330"));
-        System.out.println(stocks);
-        for (String key : stocks.keySet()){
-            System.out.println(stocks.get(key));
+
+            stocks.put("2330","TSMC");
+            System.out.println( stocks.get("2330"));
+            System.out.println(stocks);
+            for (String key : stocks.keySet()){
+                System.out.println(stocks.get(key));
 
         }
 
