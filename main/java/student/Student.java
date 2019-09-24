@@ -15,7 +15,7 @@ public class Student { //sub
 
 
 
-    private int highest(){
+     int highest(){
         return (english>math) ? english:math;
     }
 
