@@ -1,7 +1,14 @@
 package com.ted1;
 
+
+import com.ted2.Stuednt;
+
 public class Hello {
     public static void main(String[] args) {
+        Stuednt stu = new Stuednt("tom",1,5);
+
+
+
         String s ="abcdefg";
         System.out.println(s.charAt(3));
         System.out.println(s.substring(1,3));

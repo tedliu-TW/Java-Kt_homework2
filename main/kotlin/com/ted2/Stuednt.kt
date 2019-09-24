@@ -1,15 +1,14 @@
-package com.ted2.Student
+package com.ted2
 
-import student.Student
 import  java.util.*
 
 fun main() {
    // userInput()
-    Stuednt.pass=50
-    val stu = Stuednt("Hank",60,99)
-    val stu1 = Stuednt("Han",44,68)
-    val stu2 = Stuednt("ank",30,49)
-    val gstu = GraduateStudent("jack",55,65,60)
+    Stuednt.pass =50
+    val stu = Stuednt("Hank", 60, 99)
+    val stu1 = Stuednt("Han", 44, 68)
+    val stu2 = Stuednt("ank", 30, 49)
+    val gstu = GraduateStudent("jack", 55, 65, 60)
     gstu.print()
     stu.print()
     stu1.print()
@@ -33,7 +32,7 @@ class GraduateStudent(name: String?,english: Int,math: Int,var thesis:Int) : Stu
         println("$name\t$english\t$math\t$thesis\t${getAverage()}\t${passOrFailed()}\t${grading()}")
     }
 
-    override fun passOrFailed()=if(getAverage()>=pass) "PASS" else "FAILED"
+    override fun passOrFailed()=if(getAverage()>= pass) "PASS" else "FAILED"
 }
 
 
@@ -51,7 +50,8 @@ open class Stuednt( var name:String?,var english:Int,var math:Int){  //open = ja
     open fun print(){
        println("$name\t$english\t$math\t${getAverage()}\t${passOrFailed()}\t${grading()}")
     }
-    fun grading()=when(getAverage()){
+    //internal model
+    internal  fun grading()=when(getAverage()){
         in 90..100 ->'A'
         in 80..89 ->'B'
         in 70..70 ->'C'
@@ -61,7 +61,7 @@ open class Stuednt( var name:String?,var english:Int,var math:Int){  //open = ja
     }
 
     open fun passOrFailed()=
-        if(getAverage()>=pass) "PASS" else "FAILED"
+        if(getAverage()>= pass) "PASS" else "FAILED"
 
     fun getAverage() =(english+math)/2
     fun highest()=if(english>math){
